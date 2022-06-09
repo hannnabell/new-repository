@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Introducción a Git y Github</title>
+  </head>
+  <body>
+    <canvas id="c">
+    </canvas>
+    <div class="card text-center text-light bg-dark bg-gradient" id="a">
+      <div class="card-header">
+        <ul
+          class="nav nav-tabs" id="myTab" role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active color" id="git-tab" data-bs-toggle="tab" data-bs-target="#git-tab-pane" type="button" role="tab" aria-controls="git-tab-pane" aria-selected="true">git</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link color" id="github-tab" data-bs-toggle="tab" data-bs-target="#github-tab-pane" type="button" role="tab" aria-controls="github-tab-pane" aria-selected="false">github</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link color" id="installation-tab" data-bs-toggle="tab" data-bs-target="#installation-tab-pane" type="button" role="tab" aria-controls="installation-tab-pane" aria-selected="false">installation</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link color" id="repository-tab" data-bs-toggle="tab" data-bs-target="#repository-tab-pane" type="button" role="tab" aria-controls="repository-tab-pane" aria-selected="false">create repository</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link color" id="command-tab" data-bs-toggle="tab" data-bs-target="#command-tab-pane" type="button" role="tab" aria-controls="command-tab-pane" aria-selected="false">command</button>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="tab-content m-3" id="myTabContent">
+          <div class="tab-pane fade show active" id="git-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <h5 class="card-title">¿Qué es git?</h5>
+            <p class="card-text">
+              Es un
+              <span class="color" data-bs-toggle="collapse" href="#show" role="button" aria-expanded="false" aria-controls="show"
+                >sistema de control de versión</span
+              > <span class="show-2">distribuida</span>. Ayuda a guardar el historial de cambios y crecimiento
+              de los archivos de nuestro proyecto.
+              <br />
+              Git está optimizado para guardar estos cambios de forma
+              atómica e incremental, o sea, aplicando cambios sobre los últimos
+              cambios, estos sobre los cambios anteriores y así hasta el inicio
+              de nuestro proyecto.
+            </p>
+            <div class="collapse" id="show">
+                <dl class="card card-body bg-dark" >
+                  <dt>
+                    Sistemas de control de versiones (<em
+                      >Control de código fuente</em
+                    >)
+                  </dt>
+                  <dd>
+                    Es la práctica de rastrear y gestionar los cambios en el código
+                    de software. Los sistemas de control de versiones son
+                    herramientas de software que ayudan a los equipos de software a
+                    gestionar los cambios en el código fuente a lo largo del tiempo y permite a los desarrollador trabajar de forma segura a través de una bifurcación y una fusión.
+                  </dd>
+                  <div class="class-container text-light bg-dark rounded p-2">
+                    <div class="row">
+                      <dd class="col text-justify m-1">
+                        <b>Distribuido</b>: colección de computadoras separadas físicamente y conectadas entre sí por una red de comunicaciones distribuida. No hay un servidor que mantenga una copia del repositorio, sino que está mantenida entre los clientes que estén en uso del repositorio.
+                        <br>
+                        <i>Ventajas</i>:Tomas de decisiones locales. La lógica de negocio y las tomas de decisiones en cada lugar es independiente uno del otro.No está centralizada los datos de la empresa. Permite tener interfaz muy amigable o vistosa. Solo se consume el ancho de la banda de una red local.
+                        <br>
+                        <i>Desventajas</i>: Una mala distribución de los datos, es peor que un sistema centralizado, uso en exceso de la red amplia. Integridad de los datos es más difícil de controlar.
+                      </dd>
+                      <dd class="col text-justify m-1">
+                        <b>Centralizado</b>: es cuando el proceso de cómputo es realizado en una localización central, usando terminales conectados a una computadora central. Esquema cliente-servidor. 
+                        <br>
+                        <i>Ventajas</i>: Mayor control de seguridad y protección de la información en un solo punto.
+                        <br>
+                        <i>Desventajas</i>: Velocidad de repuestas lenta, dependiendo la conexión de la red a la central. Debe haber mecanismo de respaldo o copia del sistema centralizada en caso que muera el sistema central, porque muere el sistema a nivel general.
+                      </dd>
+                    </div>
+                  </div>
+                </dl>
+            </div>
+            
+            <a href="https://www.atlassian.com/es/git/tutorials/what-is-git" target="_blank"  class="btn color-bg">Documentación</a>
+          </div>
+          <div class="tab-pane fade" id="github-tab-pane" role="tabpanel" aria-labelledby="github-tab" tabindex="0"
+          >
+            <h5 class="card-title">¿Qué es GitHub?</h5>
+            <p class="card-text">
+            GitHub es una compañía sin fines de lucro que ofrece un servicio de hosting de repositorios almacenados en la nube. Hace que sea más fácil para individuos y equipos usar  <strong>Git</strong> como la versión de control y colaboración.
+            Además de esto, cualquier persona puede inscribirse y ser hospedar un repositorio de código público completamente gratuito, el cual hace que GitHub sea especialmente popular con proyectos de fuente abierta.
+            </p>
+            <a href="https://docs.github.com/es/get-started/onboarding/getting-started-with-your-github-account" target="_blank" class="btn  color-bg">Cool, quiero investigar más.</a>
+          </div>
+          <div class="tab-pane fade" id="installation-tab-pane" role="tabpanel" aria-labelledby="installation-tab" tabindex="0"
+          >
+            <h2 class="card-title">INSTALACIÓN DE GIT</h5>
+                  <div class="class-container text-light bg-dark rounded p-2">
+                    <div class="row">
+                      <div class="col text-justify m-1">
+                        <h5>Windows</h5>
+                        <a href="https://git-scm.com/download/win" target="_blank" class="color">Descargar</a>
+                        <p> 
+                          Terminado todo el proceso de instalación, tendremos el Git Bash, esto nos va a servir para ejecutar los comandos de git en Windows.
+                          Abrimos el Git Bash y ejecutamos el siguiente comando:
+                          <br>
+                          <b> git --version</b> 
+                        </p>
+                          <span>Si nos arroja la versión de Git, significa que todo está bien y ya podemos empezar a trabajar.</span> 
+                      </div>
+                      <div class="col text-justify m-1">
+                        <h5>Mac</h5>
+                        <a href="https://git-scm.com/download/mac" target="_blank" class="color">Descargar</a>
+                          <p> 
+                            Terminado todo el proceso de instalación, para verificar que todo está bien, abrimos nuestra terminal y ejecutamos el comando:
+                            <br>
+                            <b> git --version</b> 
+                          </p>
+                          <span>Si nos arroja la versión de Git, significa que todo está bien y ya podemos empezar a trabajar.</span> 
+                      </div>
+                      <div class="col text-justify m-1">
+                        <h5>Linux</h5>
+                        <p class=" card-text">La instalación en Linux es totalmente diferente a Windows y Mac, también mucho más fácil. Hay que ir a nuestra terminal y hacer la instalación dependiendo de nuestra distribución:</p>
+                        <li>Ubuntu/Debian: <b>apt-get install git</b> </li>
+                        <li>Fedora: <b>yum install git</b></li>
+                        <a href="https://git-scm.com/download/linux" target="_blank" class="color">Documentación de descarga</a>
+                      </div>
+                    </div>
+                  </div>                
+          </div>
+            <div class="tab-pane fade" id="repository-tab-pane" role="tabpanel" aria-labelledby="repository-tab" tabindex="0"
+          >
+            <h2 class="card-title">CREAR UN REPO</h5>
+              <div class="card-text text-start">
+                <p class=" card-text">
+                  Inicializamos git desde nuestra consola, paradas en el proyecto a deployar.
+                  <br>
+                  <b>git init</b> 
+                </p>
+                <p>
+                  Agregamos los ultimos cambios.
+                  <br>
+                  <b>git add .</b> 
+                </p>
+                <p>
+                  Confirmamos con un comentario
+                  <br>
+                  <b>git commit -m "(update):Cambios listos"</b> 
+                </p>
+    
+                <p>
+                  Renombramos la rama master por main
+                  <br>
+                  <b>git branch -M main</b> 
+                </p>
+                <p>
+                  Creamos nuestro repo de forma remota
+                  <br>
+                  <b>git remote add origin https://github.com/carabolanteh/git-github.git</b> 
+                </p>
+                <p>
+                  Deployamos el repo desde main
+                   <br>
+                  <b>git push origin main</b> 
+                </p>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="command-tab-pane" role="tabpanel" aria-labelledby="command-tab" tabindex="0"
+          >
+            <h2 class="card-title">COMANDOS SUPER ÚTILES</h5>
+              <div class="card-text text-start">
+
+                <p class=" card-text">
+                  El comando para iniciar nuestro repositorio, o sea, indicarle a Git que queremos usar su sistema de control de versiones en nuestro proyecto, es:
+                  <br>
+                  <b>git init</b> 
+                </p>
+                <p>
+                  El comando para que nuestro repositorio sepa de la existencia de un archivo o sus últimos cambios es:
+                  <br>
+                  <b>git add .</b> 
+                  <br>
+                  <span>Este comando no almacena las actualizaciones de forma definitiva, únicamente las guarda en algo que conocemos como “Staging Area” (área de montaje o ensayo).</span>
+                </p>
+                <p>
+                  El comando para almacenar definitivamente todos los cambios que por ahora viven en el staging area es:
+                  <br>
+                  <b>git commit</b> 
+                  <br>
+                  <span>También podemos guardar un mensaje para recordar muy bien qué cambios hicimos en este commit con el argumento</span>
+                  <br>
+                  <b>git commit -m "Cambios listos"</b> 
+                </p>
+    
+                <p>
+                  Por último, si queremos mandar nuestros commits a un servidor remoto, un lugar donde todos podamos conectar nuestros proyectos, usamos el comando:
+                  <br>
+                  <b>git push</b> 
+                </p>
+<br>
+                <h5>Navegación por carpetas</h5>
+<br>
+                 <p>
+                 Entrar a carpeta
+                  <br>
+                  <b>cd nombreCarpeta</b> 
+                </p>
+                <br>
+                <p>
+                 Salir de la carpeta
+                  <br>
+                  <b>cd ..</b> 
+                </p>
+                <br>
+                <p>
+                 Donde estamos parado
+                  <br>
+                  <b>pwd</b> 
+                </p>
+                <br>
+                <p>
+                  Las carpetas que contiene la ruta en la que estoy parada
+                  <br>
+                  <b>ls</b> 
+                </p>
+                <br>
+                <p>
+                  Crear una nueva carpeta
+                  <br>
+                  <b>mkdir carpetaNueva</b> 
+                </p>
+                <br>
+                <p>
+                  Eliminar una carpeta
+                  <b>trmdir</b>
+                </p>
+                <br>
+                 <p>
+                  Renombrar una carpeta
+                  <b>git mv viejoNombre nuevoNombre</b>
+                </p>
+              </div>
+
+            <div class="card-footer">
+              <a href="https://git-scm.com/doc" target="_blank" class="btn color-bg">Documentación oficial de git</a>
+              <a href="https://github.com/botcarola" target="_blank" class="btn btn-secondary">Perfil de Caro</a>
+              <a href="https://github.com/carabolanteh" target="_blank" class="btn btn-secondary">Perfil de Hannah</a>
+              <a href="https://github.com/Jonhks" target="_blank" class="btn btn-secondary">Perfil de Jonh</a>
+            </div>
+          </div>
+        </div>
+      <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

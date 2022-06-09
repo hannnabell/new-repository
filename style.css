@@ -1,0 +1,40 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+canvas {
+    display: block;
+}
+
+li{
+    text-decoration: none;
+}
+
+#a{
+    width: 90%;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+}
+
+.color{
+    color: #00FDC7;
+}
+.color-bg {
+    background-color: #00FDC7;
+    color: black;
+    border: none;
+}
+.color:hover {
+    color: #579185;
+}
+.color-bg:hover {
+    background-color: #0e7b63;;
+}
